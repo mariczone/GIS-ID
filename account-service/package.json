@@ -5,7 +5,10 @@
   "main": "app.js",
   "scripts": {
     "start": "set NODE_ENV=production&&node app.js",
-    "dev": "nodemon app.js"
+    "dev": "nodemon app.js",
+    "db:migrate": "sequelize db:migrate",
+    "db:rollback": "sequelize db:migrate:undo",
+    "create:migration": "sequelize migration:create"
   },
   "author": "Onimuse",
   "license": "ISC",
@@ -13,6 +16,7 @@
     "koa": "^2.4.1",
     "koa-helmet": "^3.3.0",
     "koa-morgan": "^1.0.1",
+    "sequelize-cli": "^3.1.0",
     "winston": "^2.4.0",
     "winston-daily-rotate-file": "^1.7.2"
   },
