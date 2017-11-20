@@ -1,0 +1,16 @@
+version: '2.2'
+services:
+  acc-db:
+    image: postgres:10.1-alpine
+    container_name: "acc-postgres-db"
+    restart: always
+    environment:
+      POSTGRES_DB: acc_db
+      POSTGRES_USER: gismin
+      POSTGRES_PASSWORD: xYaXB3fDyUAN2hHnLJcj
+    volumes:
+      - acc-db-data:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+volumes:
+  acc-db-data:
